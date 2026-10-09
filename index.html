@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builds By YD | Apps, Tools & Digital Products</title>
+<meta name="description" content="Builds by YD — Practical software that solves everyday problems. Android apps, Smart TV apps, and custom tech builds." />
+<meta name="google-site-verification" content="wj04EVO8ND4NNkGh_drPdYH6cU08vMMSAAliqli1src" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --faint: #94a3b8;
+    --border: #e2e8f0;
+    --surface: #f1f5f9;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04);
+    
+    /* Support Brand Colors */
+    --bmc-bg: #fff7ed; --bmc-txt: #ea580c; --bmc-border: #ffedd5;
+    --ca-bg: #f0fdf4; --ca-txt: #16a34a; --ca-border: #dcfce7;
+    --vn-bg: #f0f9ff; --vn-txt: #0284c7; --vn-border: #e0f2fe;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1121;
+      --card-bg: #151e32;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --faint: #64748b;
+      --border: #23314b;
+      --surface: #1e293b;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      --shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.3);
+      
+      /* Dark Mode Support Colors */
+      --bmc-bg: #2c1405; --bmc-txt: #fdba74; --bmc-border: #431d04;
+      --ca-bg: #052e16; --ca-txt: #4ade80; --ca-border: #064e3b;
+      --vn-bg: #082f49; --vn-txt: #38bdf8; --vn-border: #0c4a6e;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 580px;
+    padding: 5rem 1.5rem;
+  }
+
+  /* ── Header ── */
+  .header-area {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.75rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .logo-meta {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--text);
+    margin: 1.5rem auto;
+    border-radius: 4px;
+    opacity: 0.15;
+  }
+
+  .about {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+    font-weight: 400;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ── Section Labels ── */
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-weight: 700;
+    margin-top: 2.5rem;
+  }
+
+  /* ── Link stack layout ── */
+  .link-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lnk {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .lnk:hover { 
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--faint);
+  }
+
+  .lnk-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  /* ── Icon Colors ── */
+  .ic-dev  { background: #e0f2fe; color: #0369a1; }
+  .ic-tv   { background: #eff6ff; color: #1d4ed8; }
+  .ic-game { background: #ede9fe; color: #5b21b6; }
+  .ic-yt   { background: #fee2e2; color: #b91c1c; }
+  .ic-sh   { background: #dcfce7; color: #15803d; }
+  .ic-mc   { background: #fef3c7; color: #b45309; }
+  .ic-ou   { background: #fce7f3; color: #9d174d; }
+  .ic-eb   { background: #e0f2fe; color: #0369a1; }
+  .ic-et   { background: #fef9c3; color: #92400e; }
+
+  @media (prefers-color-scheme: dark) {
+    .ic-dev  { background: #0c2233; color: #7dd3fc; }
+    .ic-tv   { background: #172554; color: #93c5fd; }
+    .ic-game { background: #1e1040; color: #c4b5fd; }
+    .ic-yt   { background: #3b0f0f; color: #fca5a5; }
+    .ic-sh   { background: #0f2e1a; color: #86efac; }
+    .ic-mc   { background: #2e1a00; color: #fcd34d; }
+    .ic-ou   { background: #2e0f1e; color: #f9a8d4; }
+    .ic-eb   { background: #0c2233; color: #7dd3fc; }
+    .ic-et   { background: #2e2000; color: #fde68a; }
+  }
+
+  .lnk-body { flex: 1; min-width: 0; }
+  
+  .lnk-title { 
+    font-size: 15px; 
+    font-weight: 600; 
+    color: var(--text); 
+    margin-bottom: 4px; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+  }
+  
+  .lnk-sub { 
+    font-size: 13px; 
+    color: var(--muted); 
+    font-weight: 400; 
+    line-height: 1.4;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--surface);
+    color: var(--muted);
+  }
+
+  .lnk-arrow {
+    font-size: 18px;
+    color: var(--faint);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .lnk:hover .lnk-arrow {
+    transform: translateX(4px);
+    color: var(--text);
+  }
+
+  /* ── Quick Support Row ── */
+  .support-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 3.5rem;
+  }
+
+  .support-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid;
+    transition: transform 0.2s, filter 0.2s;
+  }
+  
+  .support-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .support-btn:hover { filter: brightness(1.15); }
+  }
+
+  .btn-bmc { background: var(--bmc-bg); color: var(--bmc-txt); border-color: var(--bmc-border); }
+  .btn-ca  { background: var(--ca-bg); color: var(--ca-txt); border-color: var(--ca-border); }
+  .btn-vn  { background: var(--vn-bg); color: var(--vn-txt); border-color: var(--vn-border); }
+  
+  .support-ic {
+    font-size: 16px;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+  }
+
+  .footer-reg {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .footer-contact {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .footer-contact a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+
+  .footer-contact a:hover {
+    border-color: var(--faint);
+  }
+
+  .footer-copy {
+    margin-top: 1rem;
+    font-size: 12px;
+    color: var(--faint);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header-area">
+    <h1 class="logo">Builds By YD</h1>
+    <p class="logo-meta">Android &bull; Smart TV &bull; Custom Builds</p>
+    
+    <div class="divider"></div>
+    
+    <p class="about">We build practical software that solves everyday problems. Explore active projects, tech content, and our online shops.</p>
+  </div>
+
+  <p class="section-label">Featured Projects</p>
+  <div class="link-stack">
+
+    <!-- 1. Snake Abyss -->
+    <a class="lnk" href="https://play.google.com/store/apps/details?id=com.gbs.snakeabyss" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-game">🐍</div>
+      <div class="lnk-body">
+        <p class="lnk-title">Snake Abyss: Infinite Descent <span class="badge" style="color: #16a34a; background: #f0fdf4;">Live</span></p>
+        <p class="lnk-sub">A deep-sea twist on classic snake. Navigate the pitch-black waters and build massive combos.</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <!-- 2. Revonate -->
+    <a class="lnk" href="https://play.google.com/store/apps/details?id=com.gbs.revonate" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-sh">🏠</div>
+      <div class="lnk-body">
+        <p class="lnk-title">Revonate: Home & Car Tracker <span class="badge" style="color: #16a34a; background: #f0fdf4;">Live</span></p>
+        <p class="lnk-sub">Track maintenance, repairs, and upgrades for your home and vehicles.</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <!-- 3. CashTrack -->
+    <a class="lnk" href="https://play.google.com/store/apps/details?id=com.gbs.cashtrack" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-dev">💸</div>
+      <div class="lnk-body">
+        <p class="lnk-title">CashTrack: Expense Tracker <span class="badge" style="color: #16a34a; background: #f0fdf4;">Live</span></p>
+        <p class="lnk-sub">Personal finance made simple.</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <!-- 4. Builds TV -->
+    <a class="lnk" href="#" onclick="return false;" style="cursor: default;">
+      <div class="lnk-icon ic-tv">📺</div>
+      <div class="lnk-body">
+        <p class="lnk-title">Builds TV <span class="badge" style="color: #1d4ed8; background: #eff6ff;">🧪 Beta</span></p>
+        <p class="lnk-sub">Modern, privacy-focused IPTV Media Player for Samsung Smart TVs.</p>
+      </div>
+      <span class="lnk-arrow" style="opacity: 0.3;">➔</span>
+    </a>
+
+    <!-- 5. TripKit -->
+    <a class="lnk" href="#" onclick="return false;" style="cursor: default;">
+      <div class="lnk-icon ic-dev">🚧</div>
+      <div class="lnk-body">
+        <p class="lnk-title">TripKit <span class="badge">In Development</span></p>
+        <p class="lnk-sub">Travel planning without the clutter. Coming soon.</p>
+      </div>
+      <span class="lnk-arrow" style="opacity: 0.3;">➔</span>
+    </a>
+
+    <!-- 6. View All -->
+    <a class="lnk" href="https://play.google.com/store/apps/dev?id=8392958924068740879" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-dev">▶</div>
+      <div class="lnk-body">
+        <p class="lnk-title">View All on Google Play</p>
+        <p class="lnk-sub">See the full library of Android apps by BuildsByYD.</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+  </div>
+
+  <p class="section-label">Content</p>
+  <div class="link-stack">
+
+    <a class="lnk" href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-yt">▶</div>
+      <div class="lnk-body">
+        <p class="lnk-title">YouTube — @buildsByYD</p>
+        <p class="lnk-sub">Tech, app development &amp; custom builds</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <a class="lnk" href="https://www.youtube.com/@StayHomeFixIt" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-sh">▶</div>
+      <div class="lnk-body">
+        <p class="lnk-title">YouTube — @StayHomeFixIt <span class="badge">Coming soon</span></p>
+        <p class="lnk-sub">DIY home projects</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+  </div>
+
+  <p class="section-label">Shop &amp; Resale (TheGoodBuysShop)</p>
+  <div class="link-stack">
+
+    <a class="lnk" href="https://www.mercari.com/u/thegoodbuysshop/?tracking_ref_id=m96755787960" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-mc">M</div>
+      <div class="lnk-body">
+        <p class="lnk-title">Mercari</p>
+        <p class="lnk-sub">Everyday items and general goods</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <a class="lnk" href="https://offerup.com/p/5166345" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-ou">O</div>
+      <div class="lnk-body">
+        <p class="lnk-title">OfferUp</p>
+        <p class="lnk-sub">Local pickups and everyday finds</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <a class="lnk" href="https://www.ebay.com/usr/thegoodbuysshop" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-eb">e</div>
+      <div class="lnk-body">
+        <p class="lnk-title">eBay</p>
+        <p class="lnk-sub">A little bit of everything</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+    <a class="lnk" href="https://www.etsy.com/shop/thegoodbuysshop" target="_blank" rel="noopener">
+      <div class="lnk-icon ic-et">✦</div>
+      <div class="lnk-body">
+        <p class="lnk-title">Etsy <span class="badge">Coming soon</span></p>
+        <p class="lnk-sub">Digital templates &amp; printables</p>
+      </div>
+      <span class="lnk-arrow">➔</span>
+    </a>
+
+  </div>
+
+  <div class="support-row">
+    <a class="support-btn btn-bmc" href="https://buymeacoffee.com/thegoodbuysshop" target="_blank" rel="noopener">
+      <span class="support-ic">☕</span> Buy Me a Coffee
+    </a>
+    <a class="support-btn btn-ca" href="https://cash.app/$TheGoodbuysShop" target="_blank" rel="noopener">
+      <span class="support-ic">💸</span> Cash App
+    </a>
+    <a class="support-btn btn-vn" href="https://www.venmo.com/u/TheGoodBuysShop" target="_blank" rel="noopener">
+      <span class="support-ic">📱</span> Venmo
+    </a>
+  </div>
+
+  <div class="footer">
+    <p class="footer-reg">Builds By YD</p>
+    <p class="footer-contact">Contact: <a href="mailto:support.thegoodbuysshop@gmail.com">support.thegoodbuysshop@gmail.com</a></p>
+    <p class="footer-copy">&copy; 2026 Builds By YD. <br>A brand of TheGoodBuysShop LLC. All rights reserved.</p>
+  </div>
+
+</div>
+</body>
+</html>
