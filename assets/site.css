@@ -360,3 +360,6 @@ section { position: relative; z-index: 1; }
 .to-top:hover { background: rgba(40, 46, 66, 0.9); }
 .to-top svg { width: 20px; height: 20px; }
 @media (max-width: 620px) { .to-top { right: 16px; bottom: 16px; } }
+
+/* real Builds By YD logo in the header and footer */
+.brand-logo { width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 0 18px rgba(56, 189, 248, 0.35); }
