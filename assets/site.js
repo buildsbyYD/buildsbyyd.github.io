@@ -26,5 +26,16 @@
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
+  // Back-to-top button: appears once you've scrolled a good way down.
+  var top = document.createElement("button");
+  top.className = "to-top";
+  top.setAttribute("aria-label", "Back to top");
+  top.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>';
+  top.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+  document.body.appendChild(top);
+  var toggleTop = function () { top.classList.toggle("show", window.scrollY > window.innerHeight * 1.2); };
+  window.addEventListener("scroll", toggleTop, { passive: true });
+  toggleTop();
+
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
