@@ -1,223 +1,178 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Builds By YD | Apps for everyday life</title>
-<meta name="description" content="Builds By YD makes focused, beautifully simple apps for your money, your home, your travels and your downtime. Android apps, Smart TV apps and custom builds.">
+<meta name="description" content="Builds By YD makes focused, beautifully simple apps for your money, your home, your travels and your downtime: CashTrack, Revonate, Snake Abyss, TripKit and Builds TV.">
 <link rel="canonical" href="https://buildsbyyd.com/">
-<meta name="theme-color" content="#06080e">
+<meta name="theme-color" content="#050608">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Builds By YD">
 <meta property="og:title" content="Builds By YD | Apps for everyday life">
-<meta property="og:description" content="Builds By YD makes focused, beautifully simple apps for your money, your home, your travels and your downtime. Android apps, Smart TV apps and custom builds.">
+<meta property="og:description" content="Focused, beautifully simple apps for your money, your home, your travels and your downtime.">
 <meta property="og:url" content="https://buildsbyyd.com/">
 <meta property="og:image" content="https://buildsbyyd.com/assets/img/og-card.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="wj04EVO8ND4NNkGh_drPdYH6cU08vMMSAAliqli1src">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;650;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<script>document.documentElement.classList.add("js")</script>
-<meta name="google-site-verification" content="wj04EVO8ND4NNkGh_drPdYH6cU08vMMSAAliqli1src">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Builds By YD", "url": "https://buildsbyyd.com", "logo": "https://buildsbyyd.com/assets/img/icon-512.png", "email": "support.thegoodbuysshop@gmail.com", "parentOrganization": {"@type": "Organization", "name": "TheGoodBuysShop LLC"}, "sameAs": ["https://www.youtube.com/@buildsByYD", "https://www.youtube.com/@StayHomeFixIt", "https://play.google.com/store/apps/dev?id=8392958924068740879"]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/byd.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Builds By YD","url":"https://buildsbyyd.com","logo":"https://buildsbyyd.com/assets/img/icon-512.png","email":"support@buildsbyyd.com","parentOrganization":{"@type":"Organization","name":"TheGoodBuysShop LLC"},"sameAs":["https://www.youtube.com/@buildsByYD","https://www.youtube.com/@StayHomeFixIt","https://play.google.com/store/apps/dev?id=8392958924068740879"]}</script>
+<script>document.documentElement.className='js';try{if(sessionStorage.getItem('byd-seen'))document.documentElement.classList.add('seen')}catch(e){}</script>
+<script type="importmap">{"imports":{"three":"./assets/vendor/three.module.min.js"}}</script>
 </head>
 <body>
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="./" aria-label="Builds By YD home"><img class="brand-logo" src="assets/img/logo-128.webp" alt="" width="36" height="36">Builds By YD</a>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav-links">
-      <a href="#apps">Apps</a>
-      <a href="#youtube">YouTube</a>
-      <a href="#shop">Shop</a>
-      <a href="mailto:support.thegoodbuysshop@gmail.com">Contact</a>
-      <a class="nav-cta" href="https://play.google.com/store/apps/dev?id=8392958924068740879" target="_blank" rel="noopener">Get the apps</a>
-    </nav>
-  </div>
-</header>
-<div class="glow"></div>
+<a class="skip" href="#apps">Skip to the apps</a>
+<div class="cur" aria-hidden="true"></div><div class="ring" aria-hidden="true"></div>
+<div class="loader" id="loader" aria-hidden="true"><b id="count">0</b><span>Builds By YD</span></div>
+
+<nav class="nav" aria-label="Main"><div class="in">
+  <a class="brand" href="#top"><img src="assets/img/logo-128.webp" alt="" width="26" height="26">Builds By YD</a>
+  <a class="l" href="#apps">Apps</a><a class="l" href="#youtube">YouTube</a><a class="l" href="#shop">Shop</a><a class="l" href="mailto:support@buildsbyyd.com" target="_blank" rel="noopener">Contact</a>
+  <a class="btn p" href="https://play.google.com/store/apps/dev?id=8392958924068740879" target="_blank" rel="noopener">Get the apps</a>
+</div></nav>
+
 <main>
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow reveal"><span class="dot"></span>3 apps live on Google Play</span>
-    <h1 class="reveal"><span class="grad">Software for the</span> <em class="serif grad">everyday.</em></h1>
-    <p class="lead reveal">Builds By YD makes focused, beautifully simple apps for your money, your home, your travels and your downtime.</p>
-    <div class="hero-ctas reveal">
-      <a class="btn btn-primary" href="#apps">Explore the apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg> Watch on YouTube</a>
-    </div>
-    <div class="hero-stage" aria-hidden="true">
-      <div class="phone p1"><img src="assets/img/hero-revonate.webp" alt="" width="540" height="1067"></div>
-      <div class="phone p2"><img src="assets/img/hero-snake-abyss.webp" alt="" width="540" height="1067"></div>
-      <div class="phone p3"><img src="assets/img/shot-cashtrack-1.webp" alt="" width="540" height="1067"></div>
-    </div>
-    <div class="strip reveal">
-      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.5l1.7-3a.4.4 0 0 0-.7-.4l-1.7 3a10.6 10.6 0 0 0-9.8 0l-1.7-3a.4.4 0 1 0-.7.4l1.7 3A9.9 9.9 0 0 0 1.5 17h21a9.9 9.9 0 0 0-4.9-7.5zM7 14.2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm10 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg> Android</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="13" rx="2.5"/><path d="M8 21h8M10.5 9.5v5l4-2.5z"/></svg> Samsung Smart TV (beta)</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg> Up to 9 languages</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7.5-4.4-9.2-9.1C1.7 7.6 4 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.2 0 5.5 3.1 4.4 6.4C19.5 15.6 12 20 12 20z"/></svg> Independent studio</span>
+<header class="hero" id="top">
+  <canvas id="gl" aria-hidden="true"></canvas><div class="still" aria-hidden="true"></div>
+  <div class="in">
+    <h1 class="split" id="h1" aria-label="Software for the everyday."><span class="line">Software for</span><br><span class="line">the <span class="serif">everyday.</span></span></h1>
+    <p class="rv">Focused, beautifully simple apps for your money, your home, your travels and your downtime. Made by an independent studio.</p>
+    <div class="ctas rv">
+      <a class="btn p mag" id="explore" href="#apps">Explore the apps</a>
+      <a class="btn g mag" href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener">Watch on YouTube</a>
     </div>
   </div>
-</section>
+  <div class="scrollhint" aria-hidden="true">Scroll<i></i></div>
+</header>
 
-<section class="section" id="apps">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">The apps</div>
-      <h2>Small apps. <em class="serif">Big</em> difference.</h2>
-      <p class="lead">Each one does one job, and does it beautifully. No clutter, no learning curve.</p>
-    </div>
-    <div class="apps">
-    <article class="app-card reveal" style="--tint:rgba(245, 184, 61, 0.16);--tint-solid:#f5b83d">
-      <div class="app-body">
-        <div class="app-top">
-          <img class="app-icon" src="assets/img/icon-cashtrack.webp" alt="CashTrack app icon" width="64" height="64">
-          <div><b>CashTrack</b> <span class="badge live">Live</span><div class="cat">Personal finance</div></div>
-        </div>
-        <h3>Know where every dollar goes.</h3>
-        <p>A clean, no-nonsense expense tracker for people who want clarity, not complexity. Log a coffee or a monthly bill in seconds and see exactly where your money goes.</p>
-        <ul class="feats"><li>Monthly budgets and per-category limits</li><li>Recurring expenses on any schedule</li><li>Visual reports that show your trends</li></ul>
-        <div class="app-actions"><a class="btn play-btn" href="https://play.google.com/store/apps/details?id=com.gbs.cashtrack" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.3 13.3 12l-9.7 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.7 2.1c1 .6 1 1.9 0 2.5z"/><path fill="#ff3a44" d="M16.6 15.3 13.3 12l-9.7 9.7c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.6 8.7 5 2.4c-.5-.3-1-.3-1.4-.1l9.7 9.7z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a><a class="btn btn-ghost" href="cashtrack/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-      <div class="app-visual">
-        <img class="shot back" src="assets/img/shot-cashtrack-1.webp" alt="" loading="lazy" width="540" height="1100">
-        <img class="shot" src="assets/img/shot-cashtrack-2.webp" alt="CashTrack screenshot" loading="lazy" width="540" height="1100">
-      </div>
-    </article>
-    <article class="app-card reveal flip" style="--tint:rgba(123, 123, 255, 0.18);--tint-solid:#8b8cff">
-      <div class="app-body">
-        <div class="app-top">
-          <img class="app-icon" src="assets/img/icon-revonate.webp" alt="Revonate app icon" width="64" height="64">
-          <div><b>Revonate</b> <span class="badge live">Live</span><div class="cat">Home & vehicles</div></div>
-        </div>
-        <h3>Your home and car, finally organized.</h3>
-        <p>Repairs, upgrades, costs and the maintenance you keep meaning to get to: every home and every vehicle you own, in one place, with reminders that actually follow up.</p>
-        <ul class="feats"><li>Track renovations and repairs by room</li><li>Maintenance, mileage and costs per vehicle</li><li>Repeating reminders so nothing slips</li></ul>
-        <div class="app-actions"><a class="btn play-btn" href="https://play.google.com/store/apps/details?id=com.gbs.revonate" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.3 13.3 12l-9.7 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.7 2.1c1 .6 1 1.9 0 2.5z"/><path fill="#ff3a44" d="M16.6 15.3 13.3 12l-9.7 9.7c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.6 8.7 5 2.4c-.5-.3-1-.3-1.4-.1l9.7 9.7z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a><a class="btn btn-ghost" href="revonate/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-      <div class="app-visual">
-        <img class="shot back" src="assets/img/shot-revonate-4.webp" alt="" loading="lazy" width="540" height="1100">
-        <img class="shot" src="assets/img/shot-revonate-1.webp" alt="Revonate screenshot" loading="lazy" width="540" height="1100">
-      </div>
-    </article>
-    <article class="app-card reveal" style="--tint:rgba(34, 211, 238, 0.16);--tint-solid:#22d3ee">
-      <div class="app-body">
-        <div class="app-top">
-          <img class="app-icon" src="assets/img/icon-snake-abyss.webp" alt="Snake Abyss app icon" width="64" height="64">
-          <div><b>Snake Abyss</b> <span class="badge live">Live</span><div class="cat">Arcade game</div></div>
-        </div>
-        <h3>Classic snake, reimagined for the deep.</h3>
-        <p>Navigate pitch-black ocean trenches, eat bioluminescent food, build massive combos and see how deep you can go. The abyss takes no prisoners.</p>
-        <ul class="feats"><li>A new Daily Depth challenge every 24 hours</li><li>Artifacts: Shield, Phantom, Tide and Magnet</li><li>Skins, auras and trails to unlock</li></ul>
-        <div class="app-actions"><a class="btn play-btn" href="https://play.google.com/store/apps/details?id=com.gbs.snakeabyss" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.3 13.3 12l-9.7 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.7 2.1c1 .6 1 1.9 0 2.5z"/><path fill="#ff3a44" d="M16.6 15.3 13.3 12l-9.7 9.7c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.6 8.7 5 2.4c-.5-.3-1-.3-1.4-.1l9.7 9.7z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a><a class="btn btn-ghost" href="snake-abyss/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-      <div class="app-visual">
-        <img class="shot back" src="assets/img/shot-snake-abyss-1.webp" alt="" loading="lazy" width="540" height="1100">
-        <img class="shot" src="assets/img/shot-snake-abyss-2.webp" alt="Snake Abyss screenshot" loading="lazy" width="540" height="1100">
-      </div>
-    </article>
-    </div>
-    <div class="duo">
-      <a class="mini reveal" href="tripkit/" style="--tint:rgba(56, 189, 248, 0.16)">
-        <div class="app-top"><img class="app-icon" src="assets/img/icon-tripkit.webp" alt="TripKit app icon" width="64" height="64"><div><span class="badge soon">Coming soon</span><div class="cat">Travel</div></div></div>
+<section class="mani" aria-label="About"><div class="wrap"><p id="mani">Five apps. One person. Each one does <em>one job,</em> and does it beautifully. No clutter, no learning curve. Just the thing you opened it for, done right.</p></div></section>
+
+<section id="apps" aria-label="The apps">
+  <div class="show-bg" aria-hidden="true"></div>
+  <div class="names" id="names" aria-hidden="true"></div>
+  <div class="wrap show-in">
+    <div class="panels" aria-live="polite">
+      <article class="panel on" id="app-cashtrack" role="tabpanel" aria-labelledby="tab-cashtrack" data-name="CashTrack" data-color="#ffbb33" data-shots="assets/img/app/cashtrack-1.jpg,assets/img/app/cashtrack-2.jpg,assets/img/app/cashtrack-3.jpg">
+        <div class="idx"><b>01</b> / 05</div>
+        <div class="row"><img src="assets/img/icon-cashtrack.webp" alt="" width="64" height="64"><span class="badge live">Live</span></div>
+        <h3>CashTrack</h3>
+        <div class="line serif">Know where every dollar goes.</div>
+        <ul><li>Snap a receipt: the amount, date and store fill in</li><li>Monthly and per-category budgets</li><li>Recurring bills and yearly reports</li></ul>
+        <div class="acts"><a class="btn p" data-cursor="Play" href="https://play.google.com/store/apps/details?id=com.gbs.cashtrack" target="_blank" rel="noopener">Get it on Google Play</a><a class="btn g" href="cashtrack/" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+      <article class="panel" id="app-revonate" role="tabpanel" aria-labelledby="tab-revonate" data-name="Revonate" data-color="#5b9dff" data-shots="assets/img/app/revonate-1.jpg,assets/img/app/revonate-2.jpg,assets/img/app/revonate-3.jpg">
+        <div class="idx"><b>02</b> / 05</div>
+        <div class="row"><img src="assets/img/icon-revonate.webp" alt="" width="64" height="64"><span class="badge live">Live</span></div>
+        <h3>Revonate</h3>
+        <div class="line serif">Your home and car, finally organized.</div>
+        <ul><li>Costs, photos and receipts for every room and vehicle</li><li>Reminders you can snooze from the notification</li><li>Reports, documents and home-screen widgets</li></ul>
+        <div class="acts"><a class="btn p" data-cursor="Play" href="https://play.google.com/store/apps/details?id=com.gbs.revonate" target="_blank" rel="noopener">Get it on Google Play</a><a class="btn g" href="revonate/" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+      <article class="panel" id="app-snake-abyss" role="tabpanel" aria-labelledby="tab-snake-abyss" data-name="Snake Abyss" data-color="#22d3ee" data-shots="assets/img/app/snake-abyss-1.jpg,assets/img/app/snake-abyss-2.jpg,assets/img/app/snake-abyss-3.jpg">
+        <div class="idx"><b>03</b> / 05</div>
+        <div class="row"><img src="assets/img/icon-snake-abyss.webp" alt="" width="64" height="64"><span class="badge live">Live</span></div>
+        <h3>Snake Abyss</h3>
+        <div class="line serif">Classic snake, reimagined for the deep.</div>
+        <ul><li>A new Daily Depth challenge every 24 hours</li><li>Artifacts: Shield, Phantom, Tide and Magnet</li><li>Skins, auras and trails to unlock</li></ul>
+        <div class="acts"><a class="btn p" data-cursor="Play" href="https://play.google.com/store/apps/details?id=com.gbs.snakeabyss" target="_blank" rel="noopener">Get it on Google Play</a><a class="btn g" href="snake-abyss/" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+      <article class="panel" id="app-tripkit" role="tabpanel" aria-labelledby="tab-tripkit" data-name="TripKit" data-color="#38bdf8" data-shots="assets/img/app/tripkit-1.jpg,assets/img/app/tripkit-2.jpg,assets/img/app/tripkit-3.jpg">
+        <div class="idx"><b>04</b> / 05</div>
+        <div class="row"><img src="assets/img/icon-tripkit.webp" alt="" width="64" height="64"><span class="badge soon">Coming soon</span></div>
         <h3>TripKit</h3>
-        <p>Your privacy-first travel companion. All-in-one travel tools that work offline: converters, smart packing, trip expenses and a secure vault for your documents.</p>
-        <span class="more">See what's coming <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="mini reveal" href="builds-tv/" style="--tint:rgba(59, 130, 246, 0.18)">
-        <div class="app-top"><img class="app-icon" src="assets/img/icon-builds-tv.webp" alt="Builds TV app icon" width="64" height="64"><div><span class="badge beta">Beta</span><div class="cat">Smart TV</div></div></div>
+        <div class="line serif">Your offline travel kit.</div>
+        <ul><li>Packing lists and bag weight limits</li><li>Converters and a price cheat sheet, offline</li><li>A private vault for your documents</li></ul>
+        <div class="acts"><a class="btn p" data-cursor="Email" href="mailto:support@buildsbyyd.com?subject=TripKit%20launch&amp;body=Let%20me%20know%20when%20TripKit%20is%20on%20Google%20Play." target="_blank" rel="noopener">Notify me at launch</a><a class="btn g" href="tripkit/" target="_blank" rel="noopener">See what's coming</a></div>
+      </article>
+      <article class="panel" id="app-builds-tv" role="tabpanel" aria-labelledby="tab-builds-tv" data-name="Builds TV" data-color="#a5a6ff" data-tv data-shots="assets/img/app/builds-tv-1.jpg">
+        <div class="idx"><b>05</b> / 05</div>
+        <div class="row"><img src="assets/img/icon-builds-tv.webp" alt="" width="64" height="64"><span class="badge beta">Beta</span></div>
         <h3>Builds TV</h3>
-        <p>A modern IPTV player for Samsung Smart TVs. A clean, fast, privacy-focused IPTV media player for the big screen.</p>
-        <span class="more">See what's coming <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
+        <div class="line serif">A modern IPTV player for the big screen.</div>
+        <ul><li>Bring your own M3U playlists</li><li>Favorite or hide channels in one press</li><li>Built around your Samsung TV remote</li></ul>
+        <div class="acts"><a class="btn p" data-cursor="Email" href="mailto:support@buildsbyyd.com?subject=Builds%20TV%20launch&amp;body=Let%20me%20know%20when%20Builds%20TV%20is%20available." target="_blank" rel="noopener">Notify me at launch</a><a class="btn g" href="builds-tv/" target="_blank" rel="noopener">See what's coming</a></div>
+      </article>
+    </div>
+    <div class="stage" id="stage" aria-hidden="true"><canvas id="three"></canvas><div class="flat"><img src="assets/img/app/cashtrack-1.jpg" alt=""></div></div>
+    <div class="rail" id="rail" role="tablist" aria-label="Pick an app">
+      <button role="tab" id="tab-cashtrack" aria-controls="app-cashtrack" aria-selected="true">CashTrack<img src="assets/img/icon-cashtrack.webp" alt=""><span class="bar"></span></button>
+      <button role="tab" id="tab-revonate" aria-controls="app-revonate" aria-selected="false" tabindex="-1">Revonate<img src="assets/img/icon-revonate.webp" alt=""><span class="bar"></span></button>
+      <button role="tab" id="tab-snake-abyss" aria-controls="app-snake-abyss" aria-selected="false" tabindex="-1">Snake Abyss<img src="assets/img/icon-snake-abyss.webp" alt=""><span class="bar"></span></button>
+      <button role="tab" id="tab-tripkit" aria-controls="app-tripkit" aria-selected="false" tabindex="-1">TripKit<img src="assets/img/icon-tripkit.webp" alt=""><span class="bar"></span></button>
+      <button role="tab" id="tab-builds-tv" aria-controls="app-builds-tv" aria-selected="false" tabindex="-1">Builds TV<img src="assets/img/icon-builds-tv.webp" alt=""><span class="bar"></span></button>
+    </div>
+  </div>
+  <div class="controls"><div class="wrap"><button id="prev" aria-label="Previous app">←</button><button id="next" aria-label="Next app">→</button><span class="hint" id="hint">Changes on its own · pick any app to take over</span></div></div>
+</section>
+
+<section class="sec" aria-labelledby="how">
+  <div class="wrap">
+    <div class="kick rv">How we build</div>
+    <h2 class="h2 rv" id="how" style="margin-top:14px">Made with <span class="serif">care,</span><br>not committees.</h2>
+    <div class="bento">
+      <div class="cell c7 rv"><div class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></div><h3>Your records stay on your phone.</h3><p>CashTrack, Revonate and TripKit need no account and keep your expenses, homes and trips on your device. Backups go where you choose.</p></div>
+      <div class="cell c5 rv"><div class="hello" id="hello" aria-hidden="true" data-words="Hello,Hallo,Hola,Bonjour,Ciao,こんにちは,안녕하세요,Olá,你好">Hello</div><h3>Up to 9 languages</h3><p>Each app speaks your language where it can.</p></div>
+      <div class="cell c4 rv"><div class="dots" aria-hidden="true"></div><h3>One job, done well</h3><p>No bloat. No maze of upsells.</p></div>
+      <div class="cell c4 rv"><div class="sig" aria-hidden="true">— YD</div><h3>Made by one person</h3><p>Every pixel, every reply to your email.</p></div>
+      <div class="cell c4 rv"><div aria-hidden="true" style="font-size:52px;font-weight:600;letter-spacing:-.05em;margin-bottom:auto;line-height:1">You</div><h3>Shaped by you</h3><p>Real feedback drives every update.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:20px">
+<section class="sec" id="youtube" aria-labelledby="watch" style="padding-top:20px">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">How we build</div>
-      <h2>Made with <em class="serif">care,</em> not committees.</h2>
-    </div>
-    <div class="values">
-      <div class="value reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div><h3>One job, done well</h3><p>Every app solves a single everyday problem, without the bloat that makes other apps a chore.</p></div>
-      <div class="value reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l1.9 5.3L19 10l-5.1 1.7L12 17l-1.9-5.3L5 10l5.1-1.7z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>Designed to feel premium</h3><p>Smooth, polished and easy on the eyes. The details matter, so we sweat them.</p></div>
-      <div class="value reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5" stroke-linecap="round"/></svg></div><h3>Shaped by you</h3><p>Real feedback from real users drives every update. Tell us what you need and we'll build it.</p></div>
+    <div class="head"><div><div class="kick rv">Watch</div><h2 class="h2 rv" id="watch" style="margin-top:14px">On the <span class="serif">channel.</span></h2></div><p class="lead rv">Cars, tech, coffee and whatever else I'm into lately.</p></div>
+    <div class="tiles t2">
+      <a class="tile rv" data-cursor="Watch" style="--c:#ff3b3b" href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></span><span><b>@buildsByYD</b><span class="s">Cars, tech, coffee &amp; more</span></span><span class="arr" aria-hidden="true">↗</span></a>
+      <a class="tile rv" data-cursor="Watch" style="--c:#ff3b3b" href="https://www.youtube.com/@StayHomeFixIt" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></span><span><b>@StayHomeFixIt <span class="badge soon">Soon</span></b><span class="s">DIY home projects</span></span><span class="arr" aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
 
-<section class="section" id="youtube" style="padding-top:40px">
+<section class="sec" id="shop" aria-labelledby="shop-h" style="padding-top:20px">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">Watch</div>
-      <h2>On the <em class="serif">channel.</em></h2>
-      <p class="lead">Cars, tech, coffee and whatever else I'm into lately. Come hang out.</p>
+    <div class="head"><div><div class="kick rv">TheGoodBuysShop</div><h2 class="h2 rv" id="shop-h" style="margin-top:14px">Shop &amp; <span class="serif">resale.</span></h2></div><p class="lead rv">Everyday finds, local pickups and digital goods on the marketplaces you already use.</p></div>
+    <div class="tiles t4">
+      <a class="tile rv" data-cursor="Shop" style="--c:#8b6cff" href="https://www.mercari.com/u/thegoodbuysshop/?tracking_ref_id=m96755787960" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">M</span><span><b>Mercari</b><span class="s">Everyday items</span></span></a>
+      <a class="tile rv" data-cursor="Shop" style="--c:#00b386" href="https://offerup.com/p/5166345" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">O</span><span><b>OfferUp</b><span class="s">Local pickups</span></span></a>
+      <a class="tile rv" data-cursor="Shop" style="--c:#e53238" href="https://www.ebay.com/usr/thegoodbuysshop" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">e</span><span><b>eBay</b><span class="s">A bit of everything</span></span></a>
+      <a class="tile rv" data-cursor="Shop" style="--c:#f1641e" href="https://www.etsy.com/shop/thegoodbuysshop" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">✦</span><span><b>Etsy <span class="badge soon">Soon</span></b><span class="s">Templates &amp; printables</span></span></a>
     </div>
-    <div class="tiles">
-      <a class="tile yt reveal" href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><b>@buildsByYD</b><span>Cars, tech, coffee &amp; more</span></div><div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a>
-      <a class="tile yt reveal" href="https://www.youtube.com/@StayHomeFixIt" target="_blank" rel="noopener"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><b>@StayHomeFixIt <span class="badge soon">Soon</span></b><span>DIY home projects</span></div><div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="shop" style="padding-top:40px">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">TheGoodBuysShop</div>
-      <h2>Shop &amp; <em class="serif">resale.</em></h2>
-      <p class="lead">Everyday finds, local pickups and digital goods from our shops on the marketplaces you already use.</p>
-    </div>
-    <div class="tiles four">
-      <a class="tile mc four-col reveal" href="https://www.mercari.com/u/thegoodbuysshop/?tracking_ref_id=m96755787960" target="_blank" rel="noopener"><div class="ic">M</div><div><b>Mercari</b><span>Everyday items &amp; general goods</span></div></a>
-      <a class="tile ou four-col reveal" href="https://offerup.com/p/5166345" target="_blank" rel="noopener"><div class="ic">O</div><div><b>OfferUp</b><span>Local pickups &amp; everyday finds</span></div></a>
-      <a class="tile eb four-col reveal" href="https://www.ebay.com/usr/thegoodbuysshop" target="_blank" rel="noopener"><div class="ic">e</div><div><b>eBay</b><span>A little bit of everything</span></div></a>
-      <a class="tile et four-col reveal" href="https://www.etsy.com/shop/thegoodbuysshop" target="_blank" rel="noopener"><div class="ic">&#10022;</div><div><b>Etsy <span class="badge soon">Soon</span></b><span>Digital templates &amp; printables</span></div></a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="support" style="padding-top:40px">
-  <div class="wrap">
-    <div class="support reveal">
-      <h2>Enjoying the <em class="serif">apps?</em></h2>
-      <p>Builds By YD is independent. If something we made saves you time or money, you can help fund what's next.</p>
-      <div class="support-row">
-        <a class="pill" href="https://buymeacoffee.com/thegoodbuysshop" target="_blank" rel="noopener"><i>&#9749;</i> Buy me a coffee</a>
-        <a class="pill" href="https://cash.app/$TheGoodbuysShop" target="_blank" rel="noopener"><i>&#128184;</i> Cash App</a>
-        <a class="pill" href="https://www.venmo.com/u/TheGoodBuysShop" target="_blank" rel="noopener"><i>&#128241;</i> Venmo</a>
+    <div class="support rv" id="support">
+      <h2 class="h2">Enjoying the <span class="serif">apps?</span></h2>
+      <p style="color:var(--muted);max-width:520px;margin:18px auto 0">Builds By YD is independent. If something here saves you time or money, you can help fund what's next.</p>
+      <div class="row">
+        <a class="btn g mag" href="https://buymeacoffee.com/thegoodbuysshop" target="_blank" rel="noopener"><span aria-hidden="true">☕</span> Buy me a coffee</a>
+        <a class="btn g mag" href="https://cash.app/$TheGoodbuysShop" target="_blank" rel="noopener"><span aria-hidden="true">💸</span> Cash App</a>
+        <a class="btn g mag" href="https://www.venmo.com/u/TheGoodBuysShop" target="_blank" rel="noopener"><span aria-hidden="true">📱</span> Venmo</a>
       </div>
     </div>
   </div>
 </section>
 </main>
-<footer class="footer">
+
+<footer>
   <div class="wrap">
-    <div class="cols">
-      <div>
-        <a class="brand" href="./"><img class="brand-logo" src="assets/img/logo-128.webp" alt="" width="36" height="36">Builds By YD</a>
-        <p>Thoughtfully built apps for everyday life, plus videos on cars, tech, coffee and more.</p>
-      </div>
-      <div><h4>Apps</h4><ul><li><a href="cashtrack/">CashTrack</a></li><li><a href="revonate/">Revonate</a></li><li><a href="snake-abyss/">Snake Abyss</a></li><li><a href="tripkit/">TripKit</a></li><li><a href="builds-tv/">Builds TV</a></li></ul></div>
-      <div><h4>Watch</h4><ul>
-        <li><a href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener">@buildsByYD</a></li>
-        <li><a href="https://www.youtube.com/@StayHomeFixIt" target="_blank" rel="noopener">@StayHomeFixIt</a></li>
-        <li><a href="https://play.google.com/store/apps/dev?id=8392958924068740879" target="_blank" rel="noopener">Google Play</a></li></ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="#shop">Shop &amp; resale</a></li>
-        <li><a href="#support">Support the work</a></li>
-        <li><a href="mailto:support.thegoodbuysshop@gmail.com">Contact us</a></li></ul></div>
+    <div class="word" aria-hidden="true">Builds By YD</div>
+    <div class="fcols">
+      <div><p style="max-width:300px">Thoughtfully built apps for everyday life, plus videos on cars, tech, coffee and more.</p></div>
+      <div><h4>Apps</h4><ul><li><a href="cashtrack/" target="_blank" rel="noopener">CashTrack</a></li><li><a href="revonate/" target="_blank" rel="noopener">Revonate</a></li><li><a href="snake-abyss/" target="_blank" rel="noopener">Snake Abyss</a></li><li><a href="tripkit/" target="_blank" rel="noopener">TripKit</a></li><li><a href="builds-tv/" target="_blank" rel="noopener">Builds TV</a></li></ul></div>
+      <div><h4>Watch</h4><ul><li><a href="https://www.youtube.com/@buildsByYD" target="_blank" rel="noopener">@buildsByYD</a></li><li><a href="https://www.youtube.com/@StayHomeFixIt" target="_blank" rel="noopener">@StayHomeFixIt</a></li><li><a href="https://play.google.com/store/apps/dev?id=8392958924068740879" target="_blank" rel="noopener">Google Play</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#shop">Shop &amp; resale</a></li><li><a href="#support">Support the work</a></li><li><a href="mailto:support@buildsbyyd.com" target="_blank" rel="noopener">Contact us</a></li></ul></div>
     </div>
-    <div class="base">
-      <span>&copy; <span data-year>2026</span> Builds By YD. A brand of TheGoodBuysShop LLC. All rights reserved.</span>
-      <a href="mailto:support.thegoodbuysshop@gmail.com">support.thegoodbuysshop@gmail.com</a>
-    </div>
+    <div class="base"><span>&copy; <span data-year>2026</span> Builds By YD. A brand of TheGoodBuysShop LLC.</span><a href="mailto:support@buildsbyyd.com" target="_blank" rel="noopener">support@buildsbyyd.com</a></div>
   </div>
 </footer>
-<script src="assets/site.js"></script>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/byd.js" defer></script>
+<script src="assets/home.js" defer></script>
 </body>
 </html>
