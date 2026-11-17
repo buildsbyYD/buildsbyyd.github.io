@@ -61,6 +61,7 @@ export async function init({ stage, canvas, apps, current, colour }) {
   const PA = SW / SH, TA = (TW - .06) / (TH - .06);
   async function setScreen(mesh, src, aspect, top, wipe) {
     const t = await tex(src), u = mesh.material.uniforms, r = fit(t, aspect, top);
+    gsap.killTweensOf(u.p); // a wipe still running from the previous screen must not drag the old image back in
     if (!wipe || !u.a.value) { u.a.value = u.b.value = t; u.ra.value = u.rb.value = r; u.p.value = 1; return; }
     u.b.value = u.a.value; u.rb.value = u.ra.value; u.a.value = t; u.ra.value = r; u.p.value = 0;
     gsap.to(u.p, { value: 1, duration: .9, ease: 'power3.inOut' });
@@ -103,11 +104,12 @@ export async function init({ stage, canvas, apps, current, colour }) {
         .to(state, { dip: 1, lean: dir, duration: .38, ease: 'power2.in' })
         .add(() => {
           shown = i;
+          // Swap straight to the new app's first screen while the device is dipped; the wipe is only for screens within one app.
+          setScreen(a.tv ? tScreen : pScreen, a.shots[0], a.tv ? TA : PA, !a.tv, false);
           if (a.tv !== isTv) { isTv = a.tv;
             gsap.to(tv.scale, { x: isTv ? 1 : .001, y: isTv ? 1 : .001, z: isTv ? 1 : .001, duration: .55, ease: 'power3.out' });
             gsap.to(phone.scale, { x: isTv ? .001 : 1, y: isTv ? .001 : 1, z: isTv ? .001 : 1, duration: .45, ease: 'power3.out' });
             gsap.to(state, { s: scaleFor(isTv), duration: .6, ease: 'power3.out' }); }
-          setScreen(a.tv ? tScreen : pScreen, a.shots[0], a.tv ? TA : PA, !a.tv, !a.tv);
         })
         .to(state, { dip: 0, lean: 0, duration: .7, ease: 'power3.out' });
     },
