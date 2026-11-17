@@ -211,7 +211,8 @@ h1 .serif{font-weight:400;letter-spacing:-.04em}
 
 /* footer */
 footer{padding:120px 0 40px;overflow:hidden}
-.word{font-size:clamp(64px,15.5vw,250px);font-weight:700;letter-spacing:-.07em;line-height:.8;white-space:nowrap;background:radial-gradient(500px circle at var(--fx,50%) var(--fy,50%),var(--accent),rgba(255,255,255,.12) 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Room on the right and below so the last letter and the descender of "y" aren't clipped by the text-fill box. */
+.word{display:inline-block;max-width:100%;font-size:clamp(56px,14.5vw,240px);font-weight:700;letter-spacing:-.07em;line-height:1;padding:0 .1em .12em 0;margin-bottom:-.12em;white-space:nowrap;background:radial-gradient(500px circle at var(--fx,50%) var(--fy,50%),var(--accent),rgba(255,255,255,.12) 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-top:70px;color:var(--muted);font-size:14px}
 .fcols h4{color:var(--text);font-size:13px;font-weight:600;margin-bottom:12px}
 .fcols ul{list-style:none;display:grid;gap:8px}

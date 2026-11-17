@@ -175,7 +175,8 @@
     const io = new IntersectionObserver(async ([e]) => {
       if (!e.isIntersecting) return; io.disconnect();
       try {
-        const { init } = await import('./device3d.js');
+        // Same version as the <script> tags in index.html, so updates aren't stuck in browser caches.
+        const { init } = await import('./device3d.js?v=2');
         device = await init({ stage: $('#stage'), canvas: $('#three'), apps, current: () => cur, colour: () => colour });
         if (device) root.classList.add('has3d');
       } catch (err) { console.warn('3D device unavailable, showing the flat one', err); }

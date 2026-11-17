@@ -13,10 +13,14 @@
 
   $$('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 
-  // Every link that leaves the page opens in a new tab.
+  // Other sites open in a new tab; our own pages stay in this tab (Back works); email links open no tab at all.
   $$('a[href]').forEach(a => {
     const h = a.getAttribute('href');
-    if (!h.startsWith('#') && !a.target) { a.target = '_blank'; a.rel = 'noopener'; }
+    if (/^(mailto|tel):/i.test(h)) { a.removeAttribute('target'); return; }
+    let u; try { u = new URL(h, location.href); } catch (e) { return; }
+    const own = u.origin === location.origin || /(^|\.)buildsbyyd\.com$/i.test(u.hostname);
+    if (own) a.removeAttribute('target');
+    else { a.target = '_blank'; a.rel = 'noopener'; }
   });
 
   // QR codes next to Play buttons (desktop only, see CSS).
