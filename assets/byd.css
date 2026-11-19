@@ -142,7 +142,7 @@ h1 .serif{font-weight:400;letter-spacing:-.04em}
 .c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c12{grid-column:span 12}
 .lock{position:absolute;top:30px;right:30px;width:74px;height:74px;border-radius:22px;display:grid;place-items:center;background:rgba(255,255,255,.04);border:1px solid var(--line2)}
 .lock svg{width:34px;height:34px;stroke:var(--text)}
-.hello{position:absolute;top:26px;left:30px;font-size:72px;font-weight:600;letter-spacing:-.05em;line-height:1}
+.hello{position:absolute;top:26px;left:30px;right:30px;font-size:clamp(36px,5.6vw,72px);font-weight:600;letter-spacing:-.05em;line-height:1;white-space:nowrap}
 .dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:18px 18px;-webkit-mask-image:linear-gradient(#000,transparent 70%);mask-image:linear-gradient(#000,transparent 70%)}
 .sig{position:absolute;top:22px;left:30px;font:400 84px/1 'Instrument Serif',serif;font-style:italic;color:var(--accent);transition:color .8s}
 .tiles{display:grid;gap:14px;margin-top:56px}
@@ -241,7 +241,10 @@ footer{padding:120px 0 40px;overflow:hidden}
   .rail{flex-direction:row;justify-self:center;order:-2;gap:12px}.rail button{font-size:0;gap:0}.rail .bar{display:none}
   .controls{position:static;margin-top:22px}.controls .wrap{justify-content:center;flex-wrap:wrap}
   .app-hero .wrap,.premium{grid-template-columns:1fr}.duo{height:480px}
-  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:220px}.c4,.c5,.c6,.c7{grid-column:span 2}
+  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:minmax(220px,auto)}.c4,.c5,.c6,.c7{grid-column:span 2}
+  /* On narrow screens the card art sits above the text instead of floating over it. */
+  .lock,.hello,.sig{position:static;margin-bottom:auto;padding-bottom:22px}
+  .hello{font-size:clamp(36px,11vw,60px)}
   .t2,.t3,.t4,.fgrid{grid-template-columns:1fr}.fcols{grid-template-columns:1fr 1fr}
   .nav a.l{display:none}
 }

@@ -36,7 +36,8 @@ export async function init({ stage, canvas, apps, current, colour }) {
     toneMapped: false,
   });
 
-  const metal = new THREE.MeshPhysicalMaterial({ color: 0x3a3c47, metalness: .9, roughness: .22, clearcoat: 1, clearcoatRoughness: .1, envMapIntensity: 1.8 });
+  // Satin rather than mirror: a mirror-like edge flares white when it tilts toward the light.
+  const metal = new THREE.MeshPhysicalMaterial({ color: 0x3a3c47, metalness: .85, roughness: .38, clearcoat: .35, clearcoatRoughness: .3, envMapIntensity: 1.25 });
   const PW = .76, PH = 1.5, PD = .085;
   const phone = new THREE.Group();
   phone.add(new THREE.Mesh(new RoundedBoxGeometry(PW, PH, PD, 6, .1), metal));
@@ -82,7 +83,8 @@ export async function init({ stage, canvas, apps, current, colour }) {
 
   // Pointer tilt, idle float and the accent rim light. Renders only while on screen.
   let mx = 0, my = 0, tx = 0, ty = 0, visible = true;
-  addEventListener('pointermove', e => { const r = stage.getBoundingClientRect(); mx = Math.max(-1, Math.min(1, (e.clientX - r.left) / r.width - .5)); my = Math.max(-1, Math.min(1, (e.clientY - r.top) / r.height - .5)); });
+  // Tilt follows the pointer but is capped, so the device never leans far enough to show its top or bottom edge head-on.
+  addEventListener('pointermove', e => { const r = stage.getBoundingClientRect(); mx = Math.max(-.6, Math.min(.6, (e.clientX - r.left) / r.width - .5)); my = Math.max(-.5, Math.min(.5, (e.clientY - r.top) / r.height - .5)); });
   new IntersectionObserver(([e]) => visible = e.isIntersecting).observe(stage);
   const clock = new THREE.Clock(), c = new THREE.Color();
   renderer.setAnimationLoop(() => {
@@ -91,7 +93,7 @@ export async function init({ stage, canvas, apps, current, colour }) {
     tx += (mx - tx) * .06; ty += (my - ty) * .06;
     rig.position.set(0, Math.sin(t * 1.1) * .03 - (isTv ? .1 : 0), -state.dip * .9);
     rig.scale.setScalar(state.s * (1 - state.dip * .06));
-    rig.rotation.set(ty * .3 + (isTv ? 0 : .05) + state.dip * .22, tx * .55 + (isTv ? 0 : -.18) + state.lean * .35, Math.sin(t * .7) * .015);
+    rig.rotation.set(ty * .16 + (isTv ? 0 : .03) + state.dip * .22, tx * .55 + (isTv ? 0 : -.18) + state.lean * .35, Math.sin(t * .7) * .015);
     c.setRGB(...colour()); rim.color.copy(c); rim2.color.copy(c);
     renderer.render(scene, camera);
   });
