@@ -109,6 +109,8 @@
     setAccent(a.color);
     // Details: old panel fades out, new one in. Screen readers hear the new panel (aria-live on .panels).
     const next = panels[i];
+    // First show (e.g. opened via #tripkit): the HTML starts with CashTrack marked on, so clear every other panel.
+    if (first) panels.forEach(p => { if (p !== next) { p.classList.remove('on'); p.hidden = true; } });
     if (prev) { prev.classList.add('out'); setTimeout(() => { prev.classList.remove('on', 'out'); prev.hidden = true; }, first ? 0 : 300); }
     setTimeout(() => { next.hidden = false; next.classList.add('on', 'out'); requestAnimationFrame(() => requestAnimationFrame(() => next.classList.remove('out'))); }, first ? 0 : 300);
     // Giant outlined name slides through behind everything.
@@ -176,7 +178,7 @@
       if (!e.isIntersecting) return; io.disconnect();
       try {
         // Same version as the <script> tags in index.html, so updates aren't stuck in browser caches.
-        const { init } = await import('./device3d.js?v=3');
+        const { init } = await import('./device3d.js?v=4');
         device = await init({ stage: $('#stage'), canvas: $('#three'), apps, current: () => cur, colour: () => colour });
         if (device) root.classList.add('has3d');
       } catch (err) { console.warn('3D device unavailable, showing the flat one', err); }
